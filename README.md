@@ -39,8 +39,9 @@ the application once, just do
 
     grunt build
 
-Either way, the application will be available in the `dist/` folder. Temporary
-files will be stored on `build/`.
+Either way, the application will be available through the `index.html` in the root
+of the project, with the application code in the `dist/` folder and static assets
+in the `assets/` folder. Temporary build files will be stored on `build/`.
 
 ### Configuring your dashboard
 
