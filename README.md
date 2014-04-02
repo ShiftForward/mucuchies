@@ -73,7 +73,7 @@ project.
 
 ## Developing new components
 
-When developing a new component to your dashboard, you will most frequently be
+When developing a new component for your dashboard, you will most frequently be
 implementing a new widget, a new source or a combination of both.
 
 In order to implement a new widget, you should create an
