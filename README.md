@@ -81,7 +81,7 @@ TODO
 
 We encourage you to contribute to Mucuchies! Submit bug reports and suggestions
 for improvements through GitHub's issues and your own improvements through pull
-requests. We particularly welcome new *widgets* and *sources*.
+requests. We particularly welcome new widgets and sources.
 
 ## Copyright
 
