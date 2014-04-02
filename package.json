@@ -1,7 +1,6 @@
 {
   "name": "mucuchies",
   "version": "1.0.0",
-  "description": "'One dashboard to rule them all'",
   "main": "Gruntfile.js",
   "repository": "",
 
