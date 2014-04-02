@@ -5,8 +5,6 @@ architecture, it needs nothing more than a simple HTTP server to work. It
 combines [Dashing][dash]'s beautiful style with [Ember.js][ember]' great object
 model and [Handlebars][hbars]' templating capabilities.
 
-TODO links to demos
-
 ## Getting started
 
 ### Building
@@ -76,7 +74,7 @@ project.
 ### Developing new components
 
 When developing a new component to your dashboard, you will most frequently be
-implementing a new widget, a new source, or a combination of both.
+implementing a new widget, a new source or a combination of both.
 
 In order to implement a new widget, you should create an
 [Ember.js class][ember-class] that extends `Dashboard.Widget` inside the
