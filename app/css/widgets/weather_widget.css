@@ -3,10 +3,10 @@
  */
 @font-face {
     font-family:'ClimaconsRegular';
-    src: url('/assets/climacons-webfont.eot');
-    src: url('/assets/climacons-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/climacons-webfont.woff') format('woff'),
-         url('/assets/climacons-webfont.ttf') format('truetype');
+    src: url('../assets/climacons-webfont.eot');
+    src: url('../assets/climacons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/climacons-webfont.woff') format('woff'),
+         url('../assets/climacons-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
