@@ -1,0 +1,15 @@
+
+.widget-song {
+  background-color: #9c4274;
+  color: rgba(255, 255, 255, 1.0);
+  padding: 0px 12px;
+}
+
+.widget-song-by {
+  font-size: 20px;
+}
+
+.widget-song-cover {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,13 @@
+<div class="gridster" {{bindAttr style=view.gridStyle}}>
+  <ul>
+    {{#each controller}}
+    <li {{bindAttr data-row="row"}}
+        {{bindAttr data-col="col"}}
+        {{bindAttr data-sizex="sizex"}}
+        {{bindAttr data-sizey="sizey"}}
+        class="gs_w">
+      {{view widgetView}}
+    </li>
+    {{/each}}
+  </ul>
+</div>

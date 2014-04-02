@@ -1,0 +1,15 @@
+{{#if title}}
+<h1 class="title">{{title}}</h1>
+{{/if}}
+
+<i class="icon-cog icon-background"></i>
+
+{{#if content}}
+<ul class="items list-nostyle">
+  {{#each formattedContent}}
+  {{{this}}}
+  {{/each}}
+</ul>
+{{/if}}
+
+{{view Dashboard.LastUpdatedView}}

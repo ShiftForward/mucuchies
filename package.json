@@ -1,0 +1,32 @@
+{
+  "name": "mucuchies",
+  "version": "1.0.0",
+  "description": "'One dashboard to rule them all'",
+  "main": "Gruntfile.js",
+  "repository": "",
+
+  "devDependencies": {
+    "grunt": "0.4.4",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-curl": "1.4.0",
+    "grunt-cdndeps": "0.2.0",
+    "grunt-neuter": "0.6.0",
+    "grunt-contrib-uglify": "0.4.0",
+    "grunt-ember-templates": "0.4.20",
+    "grunt-contrib-cssmin": "0.9.0",
+    "assemble-less": "0.7.0",
+    "grunt-contrib-watch": "0.6.1"
+  },
+
+  "cdnDeps": [
+    "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js",
+    "//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js",
+    "//cdnjs.cloudflare.com/ajax/libs/ember.js/1.1.2/ember.js",
+    "//cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.1.0/jquery.gridster.min.js",
+    "//cdnjs.cloudflare.com/ajax/libs/jquery.atmosphere/2.1.2/jquery.atmosphere.js",
+    "//cdn.jsdelivr.net/jquery.knob/1.2.2/jquery.knob.js",
+    "//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.js",
+    "//cdnjs.cloudflare.com/ajax/libs/rickshaw/1.4.6/rickshaw.js",
+    "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.js"
+  ]
+}

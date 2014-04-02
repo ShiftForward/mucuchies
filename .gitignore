@@ -1,0 +1,10 @@
+.idea
+.idea_modules
+*.iml
+*.map
+
+.DS_Store
+
+node_modules/
+build/
+dist/

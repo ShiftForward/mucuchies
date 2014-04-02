@@ -1,0 +1,73 @@
+.widget-build {
+  background-color: #728e39;
+  padding-left: 0px;
+}
+
+.widget-build .title {
+  margin-bottom: 30px;
+}
+
+.widget-build ol, ul {
+  margin: 0px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.widget-build ol {
+  list-style-position: inside;
+}
+
+.widget-build li {
+  margin-bottom: 6px;
+  padding: 2px 2px 2px 7px;
+}
+
+.widget-build .list-nostyle {
+}
+
+.widget-build .items{
+  list-style: none;
+}
+
+.widget-build li {
+  border-radius: 0px 20px 20px 0px;
+  margin-top: 5px;
+}
+
+.widget-build li .label {
+  display: block;
+  color: rgba(255, 255, 255, 1.0);
+  word-wrap: break-word;
+}
+
+.widget-build li .repo {
+  float: left;
+  text-align: left;
+  padding: 5px 0px 5px 10px;
+}
+
+.widget-build li .branch {
+  float: left;
+  text-align: left;
+  padding-top: 10px;
+  font-size: 14px;
+  padding: 11px 0px 5px 5px;
+}
+
+.widget-build li.failed {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.widget-build li.pending {
+  background-color: rgba(255,255,255, 0.15);
+}
+
+.widget-build li.passed {
+  background-color: rgba(255,255,255, 0.15);
+}
+
+.widget-build .avatar {
+  float: right;
+  text-align: right;
+  padding: 5px 5px 5px 10px;
+}

@@ -1,0 +1,28 @@
+.widget-scrum {
+  background-color: #728e39;
+  color: rgba(255, 255, 255, 1.0);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 12px;
+}
+
+.widget-scrum .title {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.widget-scrum .task-name {
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.widget-scrum .task-name {
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.widget-scrum .points {
+  font-size: 15px;
+}
+
+.widget-scrum .assigned-to {
+  float: right;
+}

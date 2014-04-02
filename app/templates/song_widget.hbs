@@ -1,0 +1,11 @@
+{{#if content}}
+<h1 class="title">{{content.status}}</h1>
+{{#if content.by}}
+<p class="widget-song-by">by {{content.by}}</p>
+{{/if}}
+<img class="widget-song-cover" {{bindAttr src=content.imageUrl
+                                          width=coverSize
+                                          height=coverSize}} />
+<p class="track">{{content.track}}</p>
+<p class="artist">{{content.artist}}</p>
+{{/if}}

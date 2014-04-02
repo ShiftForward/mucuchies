@@ -1,0 +1,26 @@
+{{#if title}}
+<h1 class="title">{{title}}</h1>
+{{/if}}
+
+<i class="icon-ok icon-background"></i>
+
+{{#if content}}
+<ul class="items list-nostyle">
+  {{#each content}}
+  <li>
+    <div class="task-name">{{task}}</div>
+    {{#each assignedTo}}
+      <img class="assigned-to" style="float: right" {{bindAttr src="avatarUrl"}}></img>
+    {{/each}}
+    <div class="task-data">
+      <span class="points">
+        <span class="points-done">{{pointsDone}}</span> /
+        <span class="points-total">{{pointsTotal}}</span>
+      </span>
+    </div>
+    <div style="clear: both;"></div>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}
+{{view Dashboard.LastUpdatedView}}

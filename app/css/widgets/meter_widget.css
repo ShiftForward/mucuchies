@@ -1,0 +1,12 @@
+.widget-meter {
+  background-color: #9c4274;
+}
+
+.widget-meter input.meter {
+  background-color: #662b4c;
+  color: #fff;
+}
+
+.widget-meter .more-info {
+  color: rgba(255, 255, 255, 0.3);
+}

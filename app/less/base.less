@@ -1,0 +1,279 @@
+/*! gridster.js - v0.1.0 - 2012-08-14
+* http://gridster.net/
+* Copyright (c) 2012 ducksboard; Licensed MIT */
+
+.gridster {
+  position: relative;
+}
+
+.gridster > * {
+    margin: 0 auto;
+    -webkit-transition: height .4s;
+    -moz-transition: height .4s;
+    -o-transition: height .4s;
+    -ms-transition: height .4s;
+    transition: height .4s;
+}
+
+.gridster .gs_w{
+    z-index: 2;
+    position: absolute;
+}
+
+.ready .gs_w:not(.preview-holder) {
+    -webkit-transition: opacity .3s, left .3s, top .3s;
+    -moz-transition: opacity .3s, left .3s, top .3s;
+    -o-transition: opacity .3s, left .3s, top .3s;
+    transition: opacity .3s, left .3s, top .3s;
+}
+
+.gridster .preview-holder {
+    z-index: 1;
+    position: absolute;
+    background-color: #fff;
+    border-color: #fff;
+    opacity: 0.3;
+}
+
+.gridster .player-revert {
+    z-index: 10!important;
+    -webkit-transition: left .3s, top .3s!important;
+    -moz-transition: left .3s, top .3s!important;
+    -o-transition: left .3s, top .3s!important;
+    transition:  left .3s, top .3s!important;
+}
+
+.gridster .dragging {
+    z-index: 10!important;
+    -webkit-transition: all 0s !important;
+    -moz-transition: all 0s !important;
+    -o-transition: all 0s !important;
+    transition: all 0s !important;
+}
+
+/* Uncomment this if you set helper : "clone" in draggable options */
+/*.gridster .player {
+  opacity:0;
+}*/
+
+/*
+*/
+@-webkit-keyframes status-warning-background {
+  0% {
+    background-color: #e82711; }
+
+  50% {
+    background-color: #9b2d23; }
+
+  100% {
+    background-color: #e82711; } }
+
+@-webkit-keyframes status-danger-background {
+  0% {
+    background-color: #eeae32; }
+
+  50% {
+    background-color: #ff9618; }
+
+  100% {
+    background-color: #eeae32; } }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background-color: #222222;
+  font-size: @body-font-size;
+  color: white;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+b, strong {
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+img, object {
+  max-width: 100%; }
+
+iframe {
+  max-width: 100%; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%; }
+
+td {
+  vertical-align: middle; }
+
+ul, ol {
+  padding: 0;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, p {
+  padding: 0;
+  margin: 0; }
+
+h1 {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: @h1-font-size;
+  font-weight: 400; }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 76px;
+  font-weight: 700;
+  color: white; }
+
+h3 {
+  font-size: @h3-font-size;
+  font-weight: 600;
+  color: white; }
+
+h4 {
+  font-size: @h4-font-size;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white; }
+
+.gridster {
+  margin: 0px auto;
+  .gridster-mixin }
+
+.icon-background {
+  width: 100%!important;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -138px;
+  opacity: 0.1;
+  font-size: 275px; }
+
+.list-nostyle {
+  list-style: none; }
+
+.gridster ul {
+  list-style: none; }
+
+.gs_w {
+  width: 100%;
+  display: table;
+  cursor: pointer; }
+
+.widget {
+  padding: 25px 12px;
+  text-align: center;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle; }
+
+.widget.status-warning {
+  background-color: #e82711;
+  -webkit-animation: status-warning-background 2s ease infinite;
+  -moz-animation: status-warning-background 2s ease infinite;
+  -ms-animation: status-warning-background 2s ease infinite; }
+  .widget.status-warning .icon-warning-sign {
+    display: inline-block; }
+  .widget.status-warning .title, .widget.status-warning .more-info {
+    color: white; }
+
+.widget.status-danger {
+  color: white;
+  background-color: #eeae32;
+  -webkit-animation: status-danger-background 2s ease infinite;
+  -moz-animation: status-danger-background 2s ease infinite;
+  -ms-animation: status-danger-background 2s ease infinite; }
+  .widget.status-danger .icon-warning-sign {
+    display: inline-block; }
+  .widget.status-danger .title, .widget.status-danger .more-info {
+    color: white; }
+
+.more-info {
+  font-size: 15px;
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  right: 0; }
+
+.updated-at {
+  font-size: @footer-font-size;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.4); }
+
+.title {
+  color: rgba(255, 255, 255, 0.7); }
+
+#save-gridster {
+  display: none;
+  position: fixed;
+  top: 0;
+  margin: 0px auto;
+  left: 50%;
+  z-index: 1000;
+  background: black;
+  width: 190px;
+  text-align: center;
+  border: 1px solid white;
+  border-top: 0px;
+  margin-left: -95px;
+  padding: 15px; }
+
+#save-gridster:hover {
+  padding-top: 25px; }
+
+#saving-instructions {
+  display: none;
+  padding: 10px;
+  width: 500px;
+  height: 122px;
+  z-index: 1000;
+  background: white;
+  top: 100px;
+  color: black;
+  font-size: 15px;
+  padding-bottom: 4px; }
+  #saving-instructions textarea {
+    white-space: nowrap;
+    width: 494px;
+    height: 80px; }
+
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none; }
+
+#container {
+  padding-top: 5px; }
+
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+

@@ -1,0 +1,10 @@
+{{#if title}}
+<h1 class="title">{{title}}</h1>
+{{/if}}
+{{#if content}}
+<h2 class="value">{{formattedValue}}</h2>
+<p class="change-rate">
+   <i {{bindAttr class="arrow"}}></i><span>{{difference}}</span>
+</p>
+{{/if}}
+{{view Dashboard.LastUpdatedView}}

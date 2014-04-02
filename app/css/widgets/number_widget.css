@@ -1,0 +1,17 @@
+.widget-number {
+  background-color: #23afa4;
+}
+
+.widget-number .value {
+  color: white;
+}
+
+.widget-number .change-rate {
+  font-weight: 500;
+  font-size: 30px;
+  color: white;
+}
+
+.widget-number .more-info {
+  color: rgba(255, 255, 255, 0.7);
+}

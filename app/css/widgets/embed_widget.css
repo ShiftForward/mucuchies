@@ -1,0 +1,23 @@
+.widget-embed {
+  background-color: #4b4b4b;
+}
+
+.widget-embed iframe {
+  width: 100%;
+  height: 281px;
+}
+
+.widget-embed.full-screen iframe {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 999999;
+}

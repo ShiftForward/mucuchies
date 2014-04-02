@@ -1,0 +1,14 @@
+{{#if title}}
+<h1 class="title">{{title}}</h1>
+{{/if}}
+{{#if content}}
+<ul class="list-nostyle">
+  {{#each content}}
+  <li>
+    <span class="label">{{label}}</span>
+    <span class="value">{{value}}</span>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}
+{{view Dashboard.LastUpdatedView}}

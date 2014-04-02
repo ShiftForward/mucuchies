@@ -1,0 +1,16 @@
+{{#if title}}
+<h1 class="title">{{title}}</h1>
+{{/if}}
+<input class="meter"
+       data-angleOffset=-125
+       data-angleArc=250
+       data-width=200
+       data-readOnly=true
+       data-bgcolor=#662b4c
+       data-fgcolor=#FFFFFF
+       {{bindAttr data-min="min"}}
+       {{bindAttr data-max="max"}} />
+{{#if content.message }}
+<h3>{{content.message}}</h3>
+{{/if}}
+{{view Dashboard.LastUpdatedView}}

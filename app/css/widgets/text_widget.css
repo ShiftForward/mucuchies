@@ -1,0 +1,11 @@
+.widget-text {
+  background-color: #ec663c;
+}
+
+.widget-text .more-info {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.widget-text.large h3 {
+  font-size: 65px;
+}
