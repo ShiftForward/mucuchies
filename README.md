@@ -5,6 +5,8 @@ architecture, it needs nothing more than a simple HTTP server to work. It
 combines [Dashing][dash]'s beautiful style with [Ember.js][ember]' great object
 model and [Handlebars][hbars]' templating capabilities.
 
+You can find a demo for the default configuration [here](http://shiftforward.github.io/mucuchies/). An alternative demo which is optimized for 1080p screens is available [here](http://shiftforward.github.io/mucuchies/1080p/).
+
 ## Getting started
 
 ### Building
