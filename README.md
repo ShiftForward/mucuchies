@@ -75,7 +75,76 @@ project.
 
 ### Developing new components
 
-TODO
+When developing a new component to your dashboard, you will most frequently be
+implementing a new widget, a new source, or a combination of both.
+
+In order to implement a new widget, you should create an
+[Ember.js class][ember-class] that extends `Dashboard.Widget` inside the
+`app/models/widgets/` folder. The `templateName` property of the class should
+point to the handlebars template. Templates should go in the `app/templates/`
+folder. Widgets should watch the `content` property for the data that comes from
+the linked source.
+
+In order to implement a new source, you should create an
+[Ember.js class][ember-class] that extends `Dashboard.Source` inside the
+`app/models/sources/` folder. Whenever the `updateData` method of a source is
+called, its argument is propagated to the linked widgets through their `content`
+property.
+
+For example, imagine that you want to create a widget that display a static
+string. You start by defining the widget:
+
+```javascript
+Dashboard.StaticStringWidget = Dashboard.Widget.extend({
+  templateName: 'static_string_widget'
+});
+```
+
+Then, put the `static_string_widget.hbs` file inside the `app/templates/`
+folder. We're simply interested in display the content, so the template is
+straighforward:
+
+```
+{{content}}
+```
+
+We also need a source to supply the widget with the string to display. We're
+assigning the `"Hello World!"` string to the source data on its creation:
+
+```javascript
+Dashboard.StaticHelloWorldSource = Dashboard.Source.extend({
+  init: function() {
+    this._super();
+    this.updateData("Hello World!");
+  }
+});
+```
+
+Wiring things together, require the widget and source files in the `app/app.js`
+file:
+
+```javascript
+require('app/models/widgets/static_string_widget');
+require('app/models/sources/static_hello_world_source');
+```
+
+And define the widget settings in the `grid.widgets` list of the config file:
+
+```javascript
+(...)
+widgets: [
+  {
+    pos: [1, 1],
+    widget: 'Dashboard.StaticStringWidget',
+    source: 'Dashboard.StaticHelloWorldSource'
+  }
+  (...)
+],
+(...)
+```
+
+The dashboard should now display the `Hello World!` string in its top left
+corner!
 
 ### Contributing
 
@@ -91,3 +160,4 @@ Copyright (c) 2014 ShiftForward, Lda. See LICENSE for details.
 [ember]: http://emberjs.com
 [hbars]: http://handlebarsjs.com
 [node]: http://nodejs.org
+[ember-class]: http://emberjs.com/guides/object-model/classes-and-instances/
