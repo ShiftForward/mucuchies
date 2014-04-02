@@ -2,8 +2,8 @@
 
 Mucuchies is ShiftForward's dashboard. Following a fully client-side
 architecture, it needs nothing more than a simple HTTP server to work. It
-combines [Dashing][dash]'s beautiful style with the [Ember.js][ember] great
-object model and [Handlebars][hbars] templating capabilities.
+combines [Dashing][dash]'s beautiful style with the [Ember.js][ember]' great
+object model and [Handlebars][hbars]' templating capabilities.
 
 TODO links to demos
 
