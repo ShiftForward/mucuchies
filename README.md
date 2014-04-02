@@ -1,11 +1,14 @@
 # Mucuchies
 
-Mucuchies is ShiftForward's dashboard.
+Mucuchies is ShiftForward's dashboard. Following a fully client-side
+architecture, it needs nothing more than a simple HTTP server to work. It
+combines [Dashing][dash]'s beautiful style with the [Ember.js][ember] great
+object model and [Handlebars][hbars] templating capabilities.
 
 ## Build instructions
 
-You'll be needing node as a development dependency. Refer to [node's site][1] to
-help you with installation instructions.
+You'll be needing node as a development dependency. Refer to [node's site][node]
+to help you with installation instructions.
 
 Once node is installed, run
 
@@ -32,8 +35,11 @@ any changes. `Gruntfile.js` orchestrates things here.
 The application will be available in the `dist/` folder. Temporary files will be
 stored on `build/`.
 
-[1]: http://nodejs.org/
-
 ## Copyright
 
 Copyright (c) 2014 ShiftForward, Lda. See LICENSE for details.
+
+[dash]: https://github.com/Shopify/dashing
+[ember]: http://emberjs.com
+[hbars]: http://handlebarsjs.com
+[node]: http://nodejs.org
