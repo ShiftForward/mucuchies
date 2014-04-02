@@ -91,7 +91,7 @@ In order to implement a new source, you should create an
 called, its argument is propagated to the linked widgets through their `content`
 property.
 
-For example, imagine that you want to create a widget that display a static
+For example, imagine that you want to create a widget that displays a static
 string. You start by defining the widget:
 
 ```javascript
@@ -101,7 +101,7 @@ Dashboard.StaticStringWidget = Dashboard.Widget.extend({
 ```
 
 Then, put the `static_string_widget.hbs` file inside the `app/templates/`
-folder. We're simply interested in display the content, so the template is
+folder. We're simply interested in displaying the content, so the template is
 straighforward:
 
 ```
