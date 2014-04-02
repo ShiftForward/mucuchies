@@ -71,7 +71,7 @@ built using the configuration file `app/config-<config_name>.js` and the respect
 LESS stylesheet. That way, you can have multiple configurations in the same
 project.
 
-### Developing new components
+## Developing new components
 
 When developing a new component to your dashboard, you will most frequently be
 implementing a new widget, a new source or a combination of both.
@@ -144,7 +144,7 @@ widgets: [
 The dashboard should now display the `Hello World!` string in its top left
 corner!
 
-### Contributing
+## Contributing
 
 We encourage you to contribute to Mucuchies! Submit bug reports and suggestions
 for improvements through GitHub's issues and your own improvements through pull
