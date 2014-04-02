@@ -1,11 +1,17 @@
 # Mucuchies
 
-Mucuchies is [ShiftForward][shiftforward]'s dashboard. Following a fully client-side
-architecture, it needs nothing more than a simple HTTP server to work (to serve the assets). It
-combines [Dashing][dash]'s beautiful style with [Ember.js][ember]' great object
-model and [Handlebars][hbars]' templating capabilities.
+Mucuchies is [ShiftForward][shiftforward]'s dashboard. Following a fully
+client-side architecture, it needs nothing more than a simple HTTP server to
+work (to serve the assets). It combines [Dashing][dash]'s beautiful style with
+[Ember.js][ember]' great object model and [Handlebars][hbars]' templating
+capabilities.
 
-You can find a demo for the default configuration [here](http://shiftforward.github.io/mucuchies/). An alternative demo which is optimized for 1080p screens is available [here](http://shiftforward.github.io/mucuchies/1080p/).
+You can find a demo for the default configuration
+[here](http://shiftforward.github.io/mucuchies/). An alternative demo which is
+optimized for 1080p screens is available
+[here](http://shiftforward.github.io/mucuchies/1080p/).
+
+![Mucuchies default configuration](https://raw.githubusercontent.com/ShiftForward/mucuchies/master/screenshot.png)
 
 ## Getting started
 
