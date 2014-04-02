@@ -137,7 +137,7 @@ widgets: [
     pos: [1, 1],
     widget: 'Dashboard.StaticStringWidget',
     source: 'Dashboard.StaticHelloWorldSource'
-  }
+  },
   (...)
 ],
 (...)
