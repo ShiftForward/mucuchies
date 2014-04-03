@@ -33,7 +33,6 @@ Dashboard.RssWidget = Dashboard.FlippableWidget.extend({
   }.property('sourceData'),
 
   nextItem: function(allData) {
-    console.log("NEXT");
     if(allData.length == 0)
       return null;
 
