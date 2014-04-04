@@ -1,0 +1,20 @@
+{{#if title}}
+  <h1 class="title">{{title}}</h1>
+{{/if}}
+
+<i class="icon-rss icon-background"></i>
+
+<div class="item">
+{{#with content}}
+  <div class="item-name">{{title}}</div>
+  <div class="item-data">
+    <span>
+      {{#if author}}
+        <span class="item-author">{{author}}</span>,
+      {{/if}}
+      <span class="item-date">{{publishedDate}}</span>
+    </span>
+  </div>
+{{/with}}
+</div>
+{{view Dashboard.LastUpdatedView}}

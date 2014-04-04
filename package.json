@@ -26,6 +26,7 @@
     "//cdn.jsdelivr.net/jquery.knob/1.2.2/jquery.knob.js",
     "//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.js",
     "//cdnjs.cloudflare.com/ajax/libs/rickshaw/1.4.6/rickshaw.js",
-    "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.js"
+    "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.js",
+    "//www.google.com/jsapi"
   ]
 }

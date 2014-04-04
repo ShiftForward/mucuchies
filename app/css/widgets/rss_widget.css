@@ -1,0 +1,26 @@
+.widget-rss {
+  background-color: #dc5945;
+  color: rgba(255, 255, 255, 1.0);
+  padding: 0 27px;
+  vertical-align: top;
+}
+
+.widget-rss .item {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.widget-rss .title {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.widget-rss .item-name {
+  color: rgba(255, 255, 255, 1.0);
+  padding-top: 50px;
+}
+
+.widget-rss .item-data {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+}
