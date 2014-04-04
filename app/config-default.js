@@ -13,7 +13,7 @@ DashboardConfig = {
       meterSource: {
         className: 'Dashboard.PeriodicSource',
         args: {
-          period: 1000,
+          period: 2000,
           dataUpdate: function(callback) {
             callback({ value: Math.round(Math.random() * 100), message: "Meter message" });
           }
