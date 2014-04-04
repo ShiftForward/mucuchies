@@ -3,6 +3,8 @@ Dashboard = Ember.Application.create({
   LOG_TRANSITIONS: true
 });
 
+require('app/helpers/smooth_helper');
+
 require('app/models/widgets/widget');
 require('app/models/widgets/flippable_widget');
 require('app/models/widgets/text_widget');

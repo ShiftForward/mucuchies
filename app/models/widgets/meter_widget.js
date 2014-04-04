@@ -7,19 +7,24 @@
  *   message: "some message"
  * }
  */
-Dashboard.MeterWidget = Dashboard.Widget.extend({
+Dashboard.MeterWidget = Dashboard.Widget.extend(Dashboard.SmoothHelper, {
   sourceData: {
     value: 0,
     message: null
   },
   min: 0,
   max: 100,
+  currentValue: 0,
 
-  onChangeValue: function() {
-    if (!Ember.isNone(this.get('widgetView').$('.meter'))) {
-      this.get('widgetView').$('.meter').val(this.get('content.value')).change();
-    }
+  onChangeContentValue: function() {
+    this.setSmooth('currentValue', this.get('content.value'));
   }.observes('content.value'),
+
+  onChangeCurrentValue: function() {
+    if (!Ember.isNone(this.get('widgetView').$('.meter'))) {
+      this.get('widgetView').$('.meter').val(Math.round(this.get('currentValue'))).change();
+    }
+  }.observes('currentValue'),
 
   widgetView: function() {
     var that = this;
@@ -28,7 +33,7 @@ Dashboard.MeterWidget = Dashboard.Widget.extend({
       classNames: ['widget', 'widget-meter'],
       didInsertElement: function() {
         this.$('.meter').knob();
-        that.onChangeValue();
+        that.onChangeCurrentValue();
       }
     });
   }.property()

@@ -6,7 +6,7 @@ Dashboard.Widget = Ember.Object.extend({
   col: 1,
   sizex: 1,
   sizey: 1,
-  sourceData: null, 
+  sourceData: null,
   source: null,
   title: null,
   classNames: ['widget'],
