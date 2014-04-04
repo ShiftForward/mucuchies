@@ -25,7 +25,7 @@ Dashboard.RssSource = Dashboard.PeriodicSource.extend({
   }.property('feedUrl', 'loaded'),
 
   dataUpdate: function(callback) {
-    if(this.get('feed')) {
+    if (this.get('feed')) {
       this.get('feed').load(function(result) {
         if (!result.error) callback(result.feed);
       }.bind(this));

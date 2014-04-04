@@ -33,11 +33,11 @@ Dashboard.RssWidget = Dashboard.FlippableWidget.extend({
   }.property('sourceData'),
 
   nextItem: function(allData) {
-    if(allData.length == 0)
+    if (allData.length == 0)
       return null;
 
     var toShow = this.get('nextItemIdx');
-    if(toShow >= allData.length) toShow = 0;
+    if (toShow >= allData.length) toShow = 0;
     this.set('nextItemIdx', (toShow + 1) % allData.length);
 
     return allData[toShow];
@@ -48,7 +48,7 @@ Dashboard.RssWidget = Dashboard.FlippableWidget.extend({
   },
 
   sourceDataObserver: function() {
-    if(!this.get('content'))
+    if (!this.get('content'))
       this.set('content', this.nextItem(this.get('entries')));
   }.observes('sourceData'),
 
