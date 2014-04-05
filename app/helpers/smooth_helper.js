@@ -16,11 +16,11 @@ Dashboard.SmoothHelper = Ember.Mixin.create({
       targetValue: value,
       currentX: 0,
       step: Math.PI / (d / this.get('interval') * 2)
-    }
+    };
     var that = this;
     p[property].intervalCall = setInterval(function() {
       if (p[property].currentX >= Math.PI / 2)
-        clearInterval(p[property].intervalCall)
+        clearInterval(p[property].intervalCall);
       else {
         that.set(property, p[property].initialValue + (p[property].targetValue - p[property].initialValue) * Math.sin(p[property].currentX));
         p[property].currentX = p[property].currentX + p[property].step;
