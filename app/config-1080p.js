@@ -13,9 +13,9 @@ DashboardConfig = {
       meterSource: {
         className: 'Dashboard.PeriodicSource',
         args: {
-          period: 1000,
+          period: 2000,
           dataUpdate: function(callback) {
-            callback({ value: Math.round(Math.random() * 100 - 50), message: "Meter message" });
+            callback({ value: Math.round(Math.random() * 1000), message: "Meter message" });
           }
         }
       },
@@ -23,9 +23,9 @@ DashboardConfig = {
       numberSource: {
         className: 'Dashboard.PeriodicSource',
         args: {
-          period: 1000,
+          period: 2000,
           dataUpdate: function(callback) {
-            callback(Math.round(Math.random() * 100 - 50));
+            callback(Math.round(Math.random() * 100));
           }
         }
       },
@@ -109,7 +109,7 @@ DashboardConfig = {
         pos: [1, 2],
         widget: 'Dashboard.MeterWidget',
         source: 'meterSource',
-        args: { title: 'Meter title' }
+        args: { title: 'Meter title', max: 1000 }
       },
       {
         pos: [1, 3],
