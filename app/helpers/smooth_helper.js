@@ -1,5 +1,6 @@
 Dashboard.SmoothHelper = Ember.Mixin.create({
   _smoothHelperInterval: 10,
+  _smoothHelperDuration: 1000,
 
   _smoothHelperProperties: function() {
     return {};
@@ -7,7 +8,7 @@ Dashboard.SmoothHelper = Ember.Mixin.create({
 
   setSmooth: function(property, value, duration) {
     var p = this.get('_smoothHelperProperties');
-    var d = typeof duration !== 'undefined' ? duration : 1000;
+    var d = typeof duration !== 'undefined' ? duration : this.get('_smoothHelperDuration');
     if (p[property] && p[property].intervalCall) {
       clearInterval(p[property].intervalCall);
     }
