@@ -1,0 +1,17 @@
+{{#if title}}
+  <h1 class="title">{{title}}</h1>
+{{/if}}
+
+<i class="icon-twitter icon-background"></i>
+
+<div class="tweet-container">
+  {{#with content}}
+    <h3>
+      <img {{bind-attr src=user.profile_image_url}} />
+      <span class="tweet-user">{{user.screen_name}}</span>
+    </h3>
+    <p class="tweet-text">{{text}}</p>
+  {{/with}}
+</div>
+
+<p class="tweet-time-ago">{{timeAgo}}</p>

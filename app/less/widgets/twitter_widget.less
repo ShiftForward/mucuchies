@@ -1,0 +1,28 @@
+@background-color: #eb9c3c;
+@text-color: rgba(255, 255, 255, 1.0);
+@timeago-color: rgba(255, 255, 255, 0.7);
+
+.widget-twitter {
+  background-color: @background-color;
+  padding: 0px 12px;
+
+  .tweet-container {
+    margin: 0 15px;
+  }
+
+  .tweet-user {
+    padding-left: 5px;
+  }
+
+  .tweet-text {
+    color: @text-color;
+  }
+
+  .tweet-time-ago {
+    font-size: 15px;
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+  }
+}

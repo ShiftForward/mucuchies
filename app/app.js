@@ -22,6 +22,7 @@ require('app/models/widgets/scrum_widget');
 require('app/models/widgets/embed_widget');
 require('app/models/widgets/youtube_widget');
 require('app/models/widgets/rss_widget');
+require('app/models/widgets/tweet_widget');
 
 require('app/models/sources/source');
 require('app/models/sources/periodic_source');
@@ -33,6 +34,7 @@ require('app/models/sources/bitstamp_source');
 require('app/models/sources/jenkins_source');
 require('app/models/sources/time_source');
 require('app/models/sources/rss_source');
+require('app/models/sources/twitter_timeline_source');
 
 require('app/views/gridster_view');
 require('app/views/last_updated_view');
