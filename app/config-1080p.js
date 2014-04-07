@@ -150,9 +150,11 @@ DashboardConfig = {
         widget: 'Dashboard.SongWidget',
         source: 'Dashboard.LastFmSource',
         sourceArgs: {
-          period: 60000, // can be less than 1 minute if a new API key is created!
           lastFmUsers: ["ruippeixotog", "jcazevedo", "beat1", "bytter", "skyh0rse"],
-          apiKey: "c0918a85adee9c257b83c66c03dd681b"
+
+          // Get your Last.fm API key at http://www.last.fm/api/account/create. Please avoid using
+          // the keys in the demo!
+          apiKey: "YOUR_API_KEY_HERE"
         }
       },
       {
