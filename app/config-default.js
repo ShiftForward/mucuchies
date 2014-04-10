@@ -10,33 +10,6 @@ DashboardConfig = {
     height: 820,
 
     sources: {
-      meterSource: {
-        className: 'Dashboard.PeriodicSource',
-        args: {
-          period: 2000,
-          dataUpdate: function(callback) {
-            callback({ value: Math.round(Math.random() * 1000), message: "Meter message" });
-          }
-        }
-      },
-
-      sinSource: {
-        className: 'Dashboard.PeriodicSource',
-        args: {
-          period: 1500,
-          currentX: 0,
-          dataUpdate: function(callback) {
-            var step = 0.5;
-            var curr = this.get('currentX');
-            this.set('currentX', curr + step);
-            var arr = [];
-            for(var i = 0; i < 5; i++)
-              arr.push({ x: curr + i * step, y: Math.sin(curr + i * step) + 1 });
-            callback(arr);
-          }
-        }
-      },
-
       tasksSource: {
         className: 'Dashboard.PeriodicSource',
         args: {
@@ -97,9 +70,18 @@ DashboardConfig = {
       },
       {
         pos: [1, 2],
-        widget: 'Dashboard.MeterWidget',
-        source: 'meterSource',
-        args: { title: 'Meter title', max: 1000 }
+        widget: 'Dashboard.TweetWidget',
+        source: 'Dashboard.TwitterTimelineSource',
+        sourceArgs: {
+          username: "shift_forward",
+
+          // Get your Twitter API keys and secrets by creating a new app at
+          // https://apps.twitter.com. Please avoid using the keys in the demo!
+          apiKey: "YOUR_API_KEY_HERE",
+          apiSecret: "YOUR_API_SECRET_HERE",
+          accessToken: "YOUR_ACCESS_TOKEN_HERE",
+          accessTokenSecret: "YOUR_ACCESS_TOKEN_SECRET_HERE"
+        }
       },
       {
         pos: [1, 3],
@@ -118,23 +100,29 @@ DashboardConfig = {
       },
       {
         pos: [2, 1],
-        widget: 'Dashboard.GraphWidget',
-        source: 'sinSource'
-      },
-      {
-        pos: [2, 2],
         widget: 'Dashboard.ScrumWidget',
         source: 'tasksSource',
         args: { title: "Sprint" }
+      },
+      {
+        pos: [2, 2],
+        widget: 'Dashboard.RssWidget',
+        source: 'Dashboard.RssSource',
+        args: { rotatePeriod: 15000 },
+        sourceArgs: {
+          feedUrl: "http://rss.slashdot.org/Slashdot/slashdot"
+        }
       },
       {
         pos: [2, 3],
         widget: 'Dashboard.SongWidget',
         source: 'Dashboard.LastFmSource',
         sourceArgs: {
-          period: 60000, // can be less than 1 minute if a new API key is created!
           lastFmUsers: ["ruippeixotog", "jcazevedo", "beat1", "bytter", "skyh0rse"],
-          apiKey: "c0918a85adee9c257b83c66c03dd681b"
+
+          // Get your Last.fm API key at http://www.last.fm/api/account/create. Please avoid using
+          // the keys in the demo!
+          apiKey: "YOUR_API_KEY_HERE"
         }
       }
     ]

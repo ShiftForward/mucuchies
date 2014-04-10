@@ -15,8 +15,10 @@ Dashboard.WeatherSource = Dashboard.PeriodicSource.extend({
 
   dataUpdate: function(callback) {
     var query = "select * from weather.forecast WHERE woeid=" + this.get('woeId') +
-      " and u='c'&format=json";
-    var url = "http://query.yahooapis.com/v1/public/yql?q=" + encodeURI(query);
+      " and u='c'";
+
+    var url = "http://query.yahooapis.com/v1/public/yql?q=" +
+      encodeURIComponent(query) + "&format=json";
 
     $.get(url, function(data) {
       var results = data.query.results;
