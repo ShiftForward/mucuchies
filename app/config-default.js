@@ -70,18 +70,12 @@ DashboardConfig = {
       },
       {
         pos: [1, 2],
-        widget: 'Dashboard.TweetWidget',
-        source: 'Dashboard.TwitterTimelineSource',
+        widget: 'Dashboard.StockWidget',
+        source: 'Dashboard.StockSource',
         sourceArgs: {
-          username: "shift_forward",
-
-          // Get your Twitter API keys and secrets by creating a new app at
-          // https://apps.twitter.com. Please avoid using the keys in the demo!
-          apiKey: "YOUR_API_KEY_HERE",
-          apiSecret: "YOUR_API_SECRET_HERE",
-          accessToken: "YOUR_ACCESS_TOKEN_HERE",
-          accessTokenSecret: "YOUR_ACCESS_TOKEN_SECRET_HERE"
+          Comp_Names: ["RUBI", "CRTO","FUEL","GOOG","FB","YHOO","AAPL"]
         }
+
       },
       {
         pos: [1, 3],
@@ -103,15 +97,6 @@ DashboardConfig = {
         widget: 'Dashboard.ScrumWidget',
         source: 'tasksSource',
         args: { title: "Sprint" }
-      },
-      {
-        pos: [2, 2],
-        widget: 'Dashboard.RssWidget',
-        source: 'Dashboard.RssSource',
-        args: { rotatePeriod: 15000 },
-        sourceArgs: {
-          feedUrl: "http://rss.slashdot.org/Slashdot/slashdot"
-        }
       },
       {
         pos: [2, 3],

@@ -2,10 +2,11 @@
  *
  */
 Dashboard.StockSource = Dashboard.PeriodicSource.extend({
-  period: 1000000,
+  period: 10000,
+  Comp_Names: [],
 
   dataUpdate: function(callback) {
-    var select = ["RUBI", "CRTO","FUEL","GOOG","FB","YHOO","AAPL"];
+    var select = this.get("Comp_Names");
     var query = "select * from yahoo.finance.quotes where symbol in(\""+select+"\")";
     var queryEnv = "store://datatables.org/alltableswithkeys";
     
