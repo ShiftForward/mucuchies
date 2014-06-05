@@ -11,7 +11,7 @@ EstaFuncao: function(){
   for(var i=0; i < c.lenght; i++){
 
     c[i].symbol;
-    c[i].BidRealtime;
+    c[i].LastTradePriceOnly;
     c[i].PercentChange;
     c[i].MarketCapitalization;
 
