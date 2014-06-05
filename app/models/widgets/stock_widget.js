@@ -5,7 +5,7 @@
 Dashboard.StockWidget = Dashboard.Widget.extend({
   sourceData: [],
     
-  Stockerfiller: function(){
+  stockerFiller: function(){
     var c = this.get("content");
 
     for(var i=0; i < c.lenght; i++){
