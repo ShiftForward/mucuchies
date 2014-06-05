@@ -5,19 +5,19 @@
 Dashboard.StockWidget = Dashboard.Widget.extend({
   sourceData: [],
     
-Stockerfiller: function(){
-  var c = this.get("content");
+  Stockerfiller: function(){
+    var c = this.get("content");
 
-  for(var i=0; i < c.lenght; i++){
+    for(var i=0; i < c.lenght; i++){
 
-    c[i].symbol;
-    c[i].LastTradePriceOnly;
-    c[i].PercentChange;
-    c[i].MarketCapitalization;
+     c[i].symbol;
+     c[i].LastTradePriceOnly;
+     c[i].PercentChange;
+     c[i].MarketCapitalization;
 
-  }
+                                   }
   return c;
-}.property("content"),
+  }.property("content"),
 
 
   title: 'Ad Tech Stocks',
