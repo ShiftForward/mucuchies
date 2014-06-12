@@ -1,0 +1,29 @@
+.widget-stock {
+  background-color: #728e39;
+  padding-left: 0px;
+}
+
+.widget-stock .title {
+  margin-bottom: 30px;
+}
+
+
+.widget-stock ol, .widget-stock ul {
+  margin: 0px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.widget-stock li {
+  margin-bottom: 6px;
+  padding: 2px 2px 2px 7px;
+}
+
+
+
+
+
+
+
+
