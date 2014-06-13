@@ -6,7 +6,9 @@
         {{bindAttr data-sizex="sizex"}}
         {{bindAttr data-sizey="sizey"}}
         class="gs_w">
-      {{view widgetView}}
+      {{#with widgetView as wv}}
+        {{view wv}}
+      {{/with}}
     </li>
     {{/each}}
   </ul>
