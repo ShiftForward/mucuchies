@@ -36,11 +36,12 @@ The `node_modules/` folder is not tracked by version control.
 Once all development dependencies are installed, the development tasks can be
 started with
 
-    grunt
+    grunt --dev
 
 This will build development versions of the application and start watching for
-any changes. `Gruntfile.js` orchestrates things here. If you simply want to build
-the application once, just do
+any changes. `Gruntfile.js` orchestrates things here and the `--dev` option skips
+minification of JavaScript code. If you simply want to build the application once
+with minification enabled, just do
 
     grunt build
 

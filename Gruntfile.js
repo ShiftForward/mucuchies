@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
   // build config command-line keys
   var configKey = grunt.option('config') || 'default';
+  var devConfig = grunt.option('dev');
 
   // files and settings derived from build config
   var lessConfigFile = "config-" + configKey + ".less";
@@ -13,6 +14,8 @@ module.exports = function(grunt) {
     src: "package.json",
     dest: "build/dependencies"
   });
+
+  var uglifyTask = devConfig ? 'copy:uglify' : 'uglify';
 
   grunt.initConfig({
 
@@ -95,15 +98,28 @@ module.exports = function(grunt) {
       "<%= buildOptions.distPath %>/application.min.js": "<%= buildOptions.buildPath %>/application.js"
     },
 
+    // copies all files from one place to another
+    copy: {
+      uglify: {
+        files: {
+          "<%= buildOptions.distPath %>/application.min.js":
+            "<%= buildOptions.buildPath %>/application.js",
+
+          "<%= buildOptions.distPath %>/application.min.js.map":
+            "<%= buildOptions.buildPath %>/application.js.map"
+        }
+      }
+    },
+
     // watches files for changes
     watch: {
       build_code: {
         files: ['package.json'],
-        tasks: ['cdndeps', 'emberTemplates', 'neuter', 'uglify']
+        tasks: ['cdndeps', 'emberTemplates', 'neuter', uglifyTask]
       },
       application_code: {
         files: ['app/**/*.js'],
-        tasks: ['neuter', 'uglify']
+        tasks: ['neuter', uglifyTask]
       },
       css_stylesheets: {
         files: ['app/css/**/*.css'],
@@ -115,7 +131,7 @@ module.exports = function(grunt) {
       },
       handlebars_templates: {
         files: ['app/templates/**/*.hbs'],
-        tasks: ['emberTemplates', 'neuter', 'uglify']
+        tasks: ['emberTemplates', 'neuter', uglifyTask]
       }
     }
   });
@@ -126,8 +142,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ember-templates');
   grunt.loadNpmTasks('grunt-neuter');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('build', ['less', 'cssmin', 'cdndeps', 'emberTemplates', 'neuter', 'uglify']);
+  grunt.registerTask('build', ['less', 'cssmin', 'cdndeps', 'emberTemplates', 'neuter', uglifyTask]);
   grunt.registerTask('default', ['build', 'watch']);
 };
