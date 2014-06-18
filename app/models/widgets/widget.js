@@ -15,7 +15,7 @@ Dashboard.Widget = Ember.Object.extend({
 
   widgetView: function() {
     var that = this;
-    return Ember.View.create({
+    return Ember.View.extend({
       templateName: that.get('templateName'),
       classNames: that.get('classNames'),
       controller: that
