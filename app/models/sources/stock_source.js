@@ -22,8 +22,7 @@ Dashboard.StockSource = Dashboard.PeriodicSource.extend({
       encodeURIComponent(query) + "&env=" + encodeURIComponent(queryEnv) + "&format=json";
 
     $.get(url, function(data) {
-      quotes = data.query.results.quote;
-      callback(quotes);
+      callback(data.query.results.quote);
     });
   }
 });
