@@ -23,6 +23,7 @@ require('app/models/widgets/embed_widget');
 require('app/models/widgets/youtube_widget');
 require('app/models/widgets/rss_widget');
 require('app/models/widgets/tweet_widget');
+require('app/models/widgets/stock_widget');
 require('app/models/widgets/composite_widget');
 
 require('app/models/sources/source');
@@ -36,6 +37,7 @@ require('app/models/sources/jenkins_source');
 require('app/models/sources/time_source');
 require('app/models/sources/rss_source');
 require('app/models/sources/twitter_timeline_source');
+require('app/models/sources/stock_source');
 
 require('app/views/gridster_view');
 require('app/views/last_updated_view');
