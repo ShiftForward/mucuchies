@@ -14,7 +14,7 @@ Dashboard.StockSource = Dashboard.PeriodicSource.extend({
   compNames: [],
 
   dataUpdate: function(callback) {
-    var select = this.get("compNames");
+    var select = this.get("compNames").toString();
     var query = "select * from yahoo.finance.quotes where symbol in(\""+select+"\")";
     var queryEnv = "store://datatables.org/alltableswithkeys";
 
