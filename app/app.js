@@ -43,6 +43,7 @@ require('app/views/gridster_view');
 require('app/views/last_updated_view');
 
 require('app/models/widget_factory');
+require('app/models/source_factory');
 
 require('app/controllers/dashboard_controller');
 
