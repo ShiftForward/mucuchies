@@ -10,7 +10,12 @@ Dashboard.TickerWidget = Dashboard.Widget.extend({
   classNames: ['widget', 'widget-ticker'],
 
   formatSourceData: function(){
+    if( typeof this.get('content') == 'string' ){
+    return this.get('content');
+    }else{
     return this.get('content').join(' ');
+    });
+    } 
   }.property('content'),
 
   widgetView: function() {
