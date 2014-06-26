@@ -1,0 +1,36 @@
+.widget-ticker {
+  background-color: #373737;
+  padding: 0px 0px 0px 0px;
+}
+
+/* Make it a marquee */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    margin:0 auto;
+    max-width:1314px;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    -webkit-animation: marquee 40s linear infinite;
+    -moz-animation: marquee 40s linear infinite;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@keyframes marquee {
+    0%   { -webkit-transform: translate(0, 0); }
+    100% { -webkit-transform: translate(-100%, 0); }
+}
+
+@-webkit-keyframes marquee {
+    0%   { -webkit-transform: translate(0, 0); }
+    100% { -webkit-transform: translate(-100%, 0); }
+}
+
+@-moz-keyframes marquee {
+    0%   { -moz-transform: translate(0, 0); }
+    100% { -moz-transform: translate(-100%, 0); }
+}
