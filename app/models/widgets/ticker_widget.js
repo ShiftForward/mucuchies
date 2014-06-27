@@ -14,14 +14,14 @@ Dashboard.TickerWidget = Dashboard.Widget.extend({
 
         var fontSize = scaleSource * scaleFactor;
 
-        var widgetUnitSize = (DashboardConfig.grid.width - DashboardConfig.widgetMargins) /
+        var widgetUnitWidth = (DashboardConfig.grid.width - DashboardConfig.widgetMargins) /
           DashboardConfig.dim[0] - DashboardConfig.widgetMargins;
 
-        var widgetSize = widgetUnitSize * widget.get('sizex') +
+        var widgetWidth = widgetUnitWidth * widget.get('sizex') +
           DashboardConfig.widgetMargins * (widget.get('sizex') - 1) - 5;
 
         this.$().css('font-size', fontSize + 'px');
-        this.$('.marquee').css('max-width', widgetSize + 'px');
+        this.$('.marquee').css('max-width', widgetWidth + 'px');
       }
   	});
   }.property()
