@@ -9,10 +9,10 @@ Dashboard.TickerWidget = Dashboard.Widget.extend({
 
   	return this._super().reopen({
   	  didInsertElement: function() {
-        var scaleFactor = 0.5;
-        var scaleSource = this.$().height();
+        var scaleFactor = 0.7;
+        var widgetHeight = this.$().height();
 
-        var fontSize = scaleSource * scaleFactor;
+        var fontSize = widgetHeight * scaleFactor;
 
         var widgetUnitWidth = (DashboardConfig.grid.width - DashboardConfig.widgetMargins) /
           DashboardConfig.dim[0] - DashboardConfig.widgetMargins;
