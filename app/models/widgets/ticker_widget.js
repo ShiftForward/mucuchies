@@ -1,3 +1,13 @@
+/**
+ * Shows arbitrary text in a news ticker-like fashion.
+ *
+ * The widget is designed to have a very small height in comparison to its width. This can be
+ * achieved by increasing the granularity of the widget sizes in the config, e.g. by setting the
+ * `dim[1]` of the grid to a high value and scaling accordingly the heights of the existing
+ * widgets.
+ *
+ * Expects data from sources as simple strings.
+ */
 Dashboard.TickerWidget = Dashboard.Widget.extend({
   sourceData: "",
 
