@@ -26,14 +26,14 @@ Dashboard.FlippableWidget = Dashboard.Widget.extend({
         var widgetUnitWidth = (DashboardConfig.grid.width - DashboardConfig.widgetMargins) /
           DashboardConfig.dim[0] - DashboardConfig.widgetMargins;
 
+        var widgetWidth = widgetUnitWidth * that.get('sizex') +
+          DashboardConfig.widgetMargins * (that.get('sizex') - 1) - 5;
+
         var widgetUnitHeight = (DashboardConfig.grid.height - DashboardConfig.widgetMargins) /
           DashboardConfig.dim[1] - DashboardConfig.widgetMargins;
 
-        var widgetWidth = widgetUnitWidth * that.get('sizex') +
-          DashboardConfig.widgetMargins * (that.get('sizex') - 1) - 4;
-
         var widgetHeight = widgetUnitHeight * that.get('sizey') +
-          DashboardConfig.widgetMargins * (that.get('sizey') - 1) - 4;
+          DashboardConfig.widgetMargins * (that.get('sizey') - 1) - 5;
 
         this.$('.front').css('width', widgetWidth + "px");
         this.$('.front').css('height', widgetHeight + "px");
