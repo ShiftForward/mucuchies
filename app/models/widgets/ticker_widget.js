@@ -1,7 +1,3 @@
-/*
-//
-//
-*/
 Dashboard.TickerWidget = Dashboard.Widget.extend({
   sourceData: "",
 
