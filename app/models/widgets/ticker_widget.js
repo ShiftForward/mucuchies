@@ -7,8 +7,8 @@ Dashboard.TickerWidget = Dashboard.Widget.extend({
   widgetView: function() {
     var widget = this;
 
-  	return this._super().reopen({
-  	  didInsertElement: function() {
+    return this._super().reopen({
+      didInsertElement: function() {
         var scaleFactor = 0.7;
         var widgetHeight = this.$().height();
 
@@ -23,6 +23,6 @@ Dashboard.TickerWidget = Dashboard.Widget.extend({
         this.$().css('font-size', fontSize + 'px');
         this.$('.marquee').css('max-width', widgetWidth + 'px');
       }
-  	});
+    });
   }.property()
 });
