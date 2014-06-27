@@ -5,26 +5,27 @@
 Dashboard.TickerWidget = Dashboard.Widget.extend({
   sourceData: "",
 
-  showLastUpdated: true,
   templateName: 'ticker_widget',
   classNames: ['widget', 'widget-ticker'],
 
   widgetView: function() {
+    var widget = this;
+
   	return this._super().reopen({
   	  didInsertElement: function() {
-        var span = this.$();
-        var that = this;
+        var scaleFactor = 0.5;
+        var scaleSource = this.$().height();
 
-		var setScale = function() {
-    		var scaleFactor = 0.5;
-    		var scaleSource = span.height();
+        var fontSize = scaleSource * scaleFactor;
 
-    		var fontSize = scaleSource * scaleFactor;
+        var widgetUnitSize = (DashboardConfig.grid.width - DashboardConfig.widgetMargins) /
+          DashboardConfig.dim[0] - DashboardConfig.widgetMargins;
 
-    		that.$().css('font-size', fontSize + 'px');
-		}
+        var widgetSize = widgetUnitSize * widget.get('sizex') +
+          DashboardConfig.widgetMargins * (widget.get('sizex') - 1) - 5;
 
-      	setScale();
+        this.$().css('font-size', fontSize + 'px');
+        this.$('.marquee').css('max-width', widgetSize + 'px');
       }
   	});
   }.property()

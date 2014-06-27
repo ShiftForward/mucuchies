@@ -7,8 +7,7 @@
 .marquee {
     overflow: hidden;
     white-space: nowrap;
-    margin:0 auto;
-    max-width:1314px;
+    margin: 0 auto;
 }
 
 .marquee span {
