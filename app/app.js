@@ -25,6 +25,7 @@ require('app/models/widgets/rss_widget');
 require('app/models/widgets/tweet_widget');
 require('app/models/widgets/stock_widget');
 require('app/models/widgets/composite_widget');
+require('app/models/widgets/ticker_widget');
 
 require('app/models/sources/source');
 require('app/models/sources/periodic_source');

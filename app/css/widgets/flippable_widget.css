@@ -21,11 +21,7 @@
 }
 
 .front {
-  width: 100%;
   display: table-cell;
-
-  width: 360px;  /*TODO not use hardcoded dimensions */
-  height: 400px;
 }
 
 .rot90 {
