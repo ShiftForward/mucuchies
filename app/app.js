@@ -39,6 +39,7 @@ require('app/models/sources/time_source');
 require('app/models/sources/rss_source');
 require('app/models/sources/twitter_timeline_source');
 require('app/models/sources/stock_source');
+require('app/models/sources/adapter_source');
 
 require('app/views/gridster_view');
 require('app/views/last_updated_view');
