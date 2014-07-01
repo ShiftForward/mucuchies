@@ -1,5 +1,7 @@
 /**
- * A pseudo-source that transforms and provides the data coming from another source.
+ * A pseudo-source that transforms and provides the data coming from another source. It allows
+ * users to use widgets requiring a certain data type with sources that provide data in
+ * another.
  */
 Dashboard.AdapterSource = Dashboard.Source.extend({
   source: {},
