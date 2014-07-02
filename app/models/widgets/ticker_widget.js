@@ -31,7 +31,7 @@ Dashboard.TickerWidget = Dashboard.Widget.extend({
           DashboardConfig.widgetMargins * (widget.get('sizex') - 1) - 5;
 
         this.$().css('font-size', fontSize + 'px');
-        this.$('.marquee').css('max-width', widgetWidth + 'px');
+        this.$().css('max-width', widgetWidth + 'px');
       }
     });
   }.property()
