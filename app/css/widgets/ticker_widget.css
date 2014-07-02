@@ -14,7 +14,7 @@
   padding-left: 100%;
   -webkit-animation: marquee 40s linear infinite;
   -moz-animation: marquee 40s linear infinite;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
