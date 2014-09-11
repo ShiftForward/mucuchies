@@ -7,6 +7,7 @@ Dashboard.AtmosphereSource = Dashboard.Source.extend({
   url: null,
   contentType: null,
   onOpen: function(request) {},
+  preMessage: function(data) { return data; },
 
   subSocket: null,
 
@@ -16,11 +17,11 @@ Dashboard.AtmosphereSource = Dashboard.Source.extend({
 
   init: function() {
     this._super();
-    if (!Ember.isEmpty(this.get("url"))) {
+    if (!Ember.isEmpty(this.get('url'))) {
       var socket = $.atmosphere;
 
       var request = {
-        url: this.get("url"),
+        url: this.get('url'),
         contentType: this.get("contentType"),
         logLevel: "debug",
         transport: "websocket",
@@ -36,7 +37,8 @@ Dashboard.AtmosphereSource = Dashboard.Source.extend({
       };
 
       request.onMessage = function(rs) {
-        that.updateData(rs.responseBody);
+        if (!Ember.isNone(rs.responseBody))
+          that.updateData(that.preMessage(rs.responseBody));
       };
 
       this.set('subSocket', socket.subscribe(request));
