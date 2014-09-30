@@ -1,8 +1,8 @@
 <h1 class="title">Weather</h1>
 {{#if content}}
-<span class="widget-weather-temperature">{{content.temperature}}</span>
+<span class="widget-weather-temperature">{{content.today.temperature}}</span>
 <span> </span>
 <span class="widget-weather-code" {{bindAttr class="codeClass"}}></span>
-<h4 class="widget-weather-location">{{content.city}}</h4>
+<h4 class="widget-weather-location">{{content.today.city}}</h4>
 {{/if}}
 {{view Dashboard.LastUpdatedView}}

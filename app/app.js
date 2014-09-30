@@ -15,6 +15,7 @@ require('app/models/widgets/meter_widget');
 require('app/models/widgets/graph_widget');
 require('app/models/widgets/html_widget');
 require('app/models/widgets/weather_widget');
+require('app/models/widgets/weather_ext_widget');
 require('app/models/widgets/song_widget');
 require('app/models/widgets/build_widget');
 require('app/models/widgets/number_widget');

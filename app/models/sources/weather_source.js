@@ -13,6 +13,18 @@ Dashboard.WeatherSource = Dashboard.PeriodicSource.extend({
   period: 300000,
   woeId: null,
 
+  extendDay: function(str) {
+    switch (str) {
+      case "Sun": return "Sunday";
+      case "Mon": return "Monday";
+      case "Tue": return "Tuesday";
+      case "Wed": return "Wednesday";
+      case "Thu": return "Thursday";
+      case "Fri": return "Friday";
+      case "Sat": return "Saturday";
+    }
+  },
+
   dataUpdate: function(callback) {
     var query = "select * from weather.forecast WHERE woeid=" + this.get('woeId') +
       " and u='c'";
@@ -20,15 +32,28 @@ Dashboard.WeatherSource = Dashboard.PeriodicSource.extend({
     var url = "http://query.yahooapis.com/v1/public/yql?q=" +
       encodeURIComponent(query) + "&format=json";
 
+    var that = this;
+
     $.get(url, function(data) {
       var results = data.query.results;
       var condition = results.channel.item.condition;
+      var forecasts = results.channel.item.forecast.splice(1);
+      forecasts.splice(2);
 
       callback({
-        temperature: condition.temp,
-        code: condition.code,
-        city: results.channel.location.city
-      })
+        today: {
+          temperature: condition.temp,
+            code: condition.code,
+            city: results.channel.location.city
+        },
+        tomorrow: {
+          title: "Tomorrow",
+          code: forecasts[0].code
+        },
+        aftertomorrow: {
+          title: that.extendDay(forecasts[1].day),
+          code: forecasts[1].code
+        }})
     });
   }
 });
