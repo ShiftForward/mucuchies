@@ -40,5 +40,5 @@ Dashboard.WeatherExtendedWidget = Dashboard.Widget.extend({
   }.property('content'),
 
   templateName: 'weather_ext_widget',
-  classNames: ['widget', 'widget-weather']
+  classNames: ['widget', 'widget-weather', 'widget-weather-ext']
 });

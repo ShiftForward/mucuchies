@@ -1,268 +1,36 @@
-/*
- * Climacons Font
- */
-@font-face {
-    font-family:'ClimaconsRegular';
-    src: url('../assets/climacons-webfont.eot');
-    src: url('../assets/climacons-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../assets/climacons-webfont.woff') format('woff'),
-         url('../assets/climacons-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.widget-weather {
-  background-color: #23afa4;
-}
-
-.widget-weather ul {
-  margin: 0px;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.widget-weather li {
-  margin-bottom: 6px;
-  padding: 2px 2px 2px 7px;
-  border-radius: 0px 20px 20px 0px;
-  margin-top: 5px;
-  padding: 6px 17px;
-}
-
-.widget-weather .items{
-  list-style: none;
-}
-
-.widget-weather-date {
-  display: inline-block;
-  vertical-align: middle;
-  float: right;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.widget-weather-text {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.widget-weather-temperature {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 80px;
-  color: rgba(255, 255, 255, 1.0);
-}
-
-.widget-weather-temperature:after {
-    content: "\00b0";
-}
-
-.widget-weather-temperature.small {
-  font-size: 18px;
-}
-
-.widget-weather-location {
-  width: 100%;
-}
-
-.widget-weather-code:before {
-  color: rgba(255, 255, 255, 1.0);
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 120px;
-  font-family: "ClimaconsRegular";
-}
-
-.widget-weather.list-nostyle {
-}
-
-.widget-weather .title {
+.widget-weather-ext .title {
   margin-bottom: 0px;
 }
 
-.widget-weather .items{
-  list-style: none;
-}
-
-.widget-weather li {
-  border-radius: 0px 20px 20px 0px;
-  margin-top: 5px;
-  background-color: rgba(255,255,255, 0.15);
-}
-
-.widget-weather-nextdays-date {
+.widget-weather-ext-nextdays-date {
   font-size: 18px;
   padding-top: 5px;
 }
 
-.widget-weather-nextdays-icon {
+.widget-weather-ext-nextdays-icon {
   padding-top: 2px;
 }
 
-.widget-weather-nextdays-box {
+.widget-weather-ext-nextdays-box {
   float: left;
   width: 50%;
   text-align: center;
 }
 
-.widget-weather-nextdays-container {
+.widget-weather-ext-nextdays-container {
   clear: both;
   display: table;
   width: 100%;
   padding-bottom: 14px;
 }
 
-.widget-weather-nextdays-icon.widget-weather-code:before {
+.widget-weather-ext-nextdays-icon.widget-weather-code:before {
   font-size: 52px;
 }
 
-.widget-weather-nextdays-box-wrap {
+.widget-weather-ext-nextdays-box-wrap {
   background-color: rgba(255,255,255,.15);
   width: 77%;
   display: inline-block;
   padding: 8px 8px 13px;
 }
-
-/* climacons */
-.widget-weather-code-0:before {
-  content: "\e037"; }
-
-.widget-weather-code-1:before {
-  content: "\e009"; }
-
-.widget-weather-code-2:before {
-  content: "\e037"; }
-
-.widget-weather-code-3:before {
-  content: "\e025"; }
-
-.widget-weather-code-4:before {
-  content: "\e025"; }
-
-.widget-weather-code-5:before {
-  content: "\e00f"; }
-
-.widget-weather-code-6:before {
-  content: "\e015"; }
-
-.widget-weather-code-7:before {
-  content: " \e00f"; }
-
-.widget-weather-code-8:before {
-  content: "\e00c"; }
-
-.widget-weather-code-9:before {
-  content: "\e00c"; }
-
-.widget-weather-code-10:before {
-  content: "\e00f"; }
-
-.widget-weather-code-11:before {
-  content: "\e006"; }
-
-.widget-weather-code-12:before {
-  content: "\e006"; }
-
-.widget-weather-code-13:before {
-  content: "\e015"; }
-
-.widget-weather-code-14:before {
-  content: "\e018"; }
-
-.widget-weather-code-15:before {
-  content: "\e018"; }
-
-.widget-weather-code-16:before {
-  content: "\e018"; }
-
-.widget-weather-code-17:before {
-  content: "\e012"; }
-
-.widget-weather-code-18:before {
-  content: "\e00f"; }
-
-.widget-weather-code-19:before {
-  content: "\e01e"; }
-
-.widget-weather-code-20:before {
-  content: "\e01b"; }
-
-.widget-weather-code-21:before {
-  content: "\e01e"; }
-
-.widget-weather-code-22:before {
-  content: "\e01e"; }
-
-.widget-weather-code-23:before {
-  content: "\e01e"; }
-
-.widget-weather-code-24:before {
-  content: "\e021"; }
-
-.widget-weather-code-25:before {
-  content: "\e01b"; }
-
-.widget-weather-code-26:before {
-  content: "\e000"; }
-
-.widget-weather-code-27:before {
-  content: "\e002"; }
-
-.widget-weather-code-28:before {
-  content: "\e001"; }
-
-.widget-weather-code-29:before {
-  content: "\e002"; }
-
-.widget-weather-code-30:before {
-  content: "\e001"; }
-
-.widget-weather-code-31:before {
-  content: "\e02d"; }
-
-.widget-weather-code-32:before {
-  content: "\e028"; }
-
-.widget-weather-code-33:before {
-  content: "\e02d"; }
-
-.widget-weather-code-34:before {
-  content: "\e028"; }
-
-.widget-weather-code-35:before {
-  content: "\e012"; }
-
-.widget-weather-code-36:before {
-  content: "\e028"; }
-
-.widget-weather-code-37:before {
-  content: "\e025"; }
-
-.widget-weather-code-38:before {
-  content: "\e025"; }
-
-.widget-weather-code-39:before {
-  content: "\e025"; }
-
-.widget-weather-code-40:before {
-  content: "\e006"; }
-
-.widget-weather-code-41:before {
-  content: "\e036"; }
-
-.widget-weather-code-42:before {
-  content: "\e036"; }
-
-.widget-weather-code-43:before {
-  content: "\e036"; }
-
-.widget-weather-code-44:before {
-  content: "\e000"; }
-
-.widget-weather-code-45:before {
-  content: "\e025"; }
-
-.widget-weather-code-46:before {
-  content: "\e036"; }
-
-.widget-weather-code-47:before {
-  content: "\e025"; }

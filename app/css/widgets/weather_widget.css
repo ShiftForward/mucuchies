@@ -47,7 +47,7 @@
   content: "\e009"; }
 
 .widget-weather-code-2:before {
-  content: "\e009"; }
+  content: "\e037"; }
 
 .widget-weather-code-3:before {
   content: "\e025"; }
@@ -140,10 +140,10 @@
   content: "\e028"; }
 
 .widget-weather-code-33:before {
-  content: "\e001"; }
+  content: "\e02d"; }
 
 .widget-weather-code-34:before {
-  content: "\e002"; }
+  content: "\e028"; }
 
 .widget-weather-code-35:before {
   content: "\e012"; }
