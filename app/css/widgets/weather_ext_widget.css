@@ -1,0 +1,35 @@
+.widget-weather-ext .title {
+  margin-bottom: 0px;
+}
+
+.widget-weather-ext-nextdays-date {
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.widget-weather-ext-nextdays-icon {
+  padding-top: 2px;
+}
+
+.widget-weather-ext-nextdays-box {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.widget-weather-ext-nextdays-container {
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+.widget-weather-ext-nextdays-icon.widget-weather-code:before {
+  font-size: 52px;
+}
+
+.widget-weather-ext-nextdays-box-wrap {
+  background-color: rgba(255,255,255,.15);
+  width: 77%;
+  display: inline-block;
+  padding: 8px 8px 13px;
+}

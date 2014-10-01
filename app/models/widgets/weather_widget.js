@@ -18,8 +18,8 @@ Dashboard.WeatherWidget = Dashboard.Widget.extend({
   showLastUpdated: true,
 
   codeClass: function() {
-    return "widget-weather-code-" + this.get('content.code');
-  }.property('content.code'),
+    return "widget-weather-code-" + this.get('content.today.code');
+  }.property('content.today.code'),
 
   templateName: 'weather_widget',
   classNames: ['widget', 'widget-weather']

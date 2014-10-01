@@ -1,0 +1,23 @@
+<h1 class="title">Weather</h1>
+{{#if content}}
+<span class="widget-weather-temperature">{{content.today.temperature}}</span>
+<span> </span>
+<span class="widget-weather-code widget-weather-code" {{bindAttr class="todayCodeClass"}}></span>
+<br>
+<div class="widget-weather-ext-nextdays-container">
+  <div class="widget-weather-ext-nextdays-box">
+    <div class="widget-weather-ext-nextdays-box-wrap">
+      <div class="widget-weather-ext-nextdays-date">{{content.tomorrow.title}}</div>
+      <div class="widget-weather-ext-nextdays-icon widget-weather-code" {{bindAttr class="tomorrowCodeClass"}}></div>
+    </div>
+  </div>
+  <div class="widget-weather-ext-nextdays-box">
+    <div class="widget-weather-ext-nextdays-box-wrap">
+      <div class="widget-weather-ext-nextdays-date">{{content.aftertomorrow.title}}</div>
+      <div class="widget-weather-ext-nextdays-icon widget-weather-code" {{bindAttr class="aftertomorrowCodeClass"}}></div>
+    </div>
+  </div>
+</div>
+<h4 class="widget-weather-location">{{content.today.city}}</h4>
+{{/if}}
+{{view Dashboard.LastUpdatedView}}
