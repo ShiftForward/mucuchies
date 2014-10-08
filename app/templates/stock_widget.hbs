@@ -7,15 +7,15 @@
 {{#if content}}
 <table>
   <tr>
-    <th>Comp.</th>
-    <th>A.V.</th>
-    <th>% Chg.</th>
-    <th>T.V.</th>
+    <th></th>
+    <th>Price</th>
+    <th>% Chg</th>
+    <th>Mkt cap</th>
   </tr>
 {{#each content}}
   <tr>
     <td>{{{this.symbol}}}</td>
-    <td>{{{this.BidRealtime}}}</td>
+    <td>{{{this.LastTradePriceOnly}}}</td>
     <td>{{{this.PercentChange}}}</td>
     <td>{{{this.MarketCapitalization}}}</td>
   </tr>
