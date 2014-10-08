@@ -5,7 +5,7 @@
  * Provides data as an array of Tweet (https://dev.twitter.com/docs/platform-objects/tweets)
  * objects.
  */
-Dashboard.TwitterTimelineSource = Dashboard.PeriodicSource.extend({
+Dashboard.TwitterTimelineSource = Dashboard.PeriodicSource.extend(Dashboard.YqlHelper, {
   period: 30000,
 
   apiKey: "",
@@ -23,12 +23,7 @@ Dashboard.TwitterTimelineSource = Dashboard.PeriodicSource.extend({
       "AND access_token_secret='" + this.get('accessTokenSecret') + "' " +
       "AND screen_name='" + this.get('username') + "' ";
 
-    var store = "store://datatables.org/alltableswithkeys";
-
-    var url = "https://query.yahooapis.com/v1/public/yql?q=" +
-      encodeURIComponent(query) + "&env=" + encodeURIComponent(store) + "&format=json";
-
-    $.get(url, function(data) {
+    $.get(this.queryUrl(query), function(data) {
       callback(data.query.results.json.json);
     });
   }
