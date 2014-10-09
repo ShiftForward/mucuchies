@@ -39,6 +39,7 @@ require('app/models/sources/bitstamp_source');
 require('app/models/sources/jenkins_source');
 require('app/models/sources/time_source');
 require('app/models/sources/rss_source');
+require('app/models/sources/twitter_search_source');
 require('app/models/sources/twitter_timeline_source');
 require('app/models/sources/stock_source');
 require('app/models/sources/adapter_source');
