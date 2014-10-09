@@ -9,7 +9,7 @@
  *   city: "city name"
  * }
  */
-Dashboard.WeatherSource = Dashboard.PeriodicSource.extend({
+Dashboard.WeatherSource = Dashboard.PeriodicSource.extend(Dashboard.YqlHelper, {
   period: 300000,
   woeId: null,
 
@@ -29,12 +29,9 @@ Dashboard.WeatherSource = Dashboard.PeriodicSource.extend({
     var query = "select * from weather.forecast WHERE woeid=" + this.get('woeId') +
       " and u='c'";
 
-    var url = "http://query.yahooapis.com/v1/public/yql?q=" +
-      encodeURIComponent(query) + "&format=json";
-
     var that = this;
 
-    $.get(url, function(data) {
+    $.get(this.queryUrl(query), function(data) {
       var results = data.query.results;
       var condition = results.channel.item.condition;
       var forecasts = results.channel.item.forecast.splice(1);

@@ -9,19 +9,15 @@
  *   MarketCapitalization: "464.4M"
  * }
  */
-Dashboard.StockSource = Dashboard.PeriodicSource.extend({
+Dashboard.StockSource = Dashboard.PeriodicSource.extend(Dashboard.YqlHelper, {
   period: 10000,
   compNames: [],
 
   dataUpdate: function(callback) {
     var select = this.get("compNames").toString();
     var query = "select * from yahoo.finance.quotes where symbol in(\""+select+"\")";
-    var queryEnv = "store://datatables.org/alltableswithkeys";
 
-    var url = "http://query.yahooapis.com/v1/public/yql?q=" +
-      encodeURIComponent(query) + "&env=" + encodeURIComponent(queryEnv) + "&format=json";
-
-    $.get(url, function(data) {
+    $.get(this.queryUrl(query), function(data) {
       callback(data.query.results.quote);
     });
   }

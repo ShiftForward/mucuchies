@@ -4,6 +4,7 @@ Dashboard = Ember.Application.create({
 });
 
 require('app/helpers/smooth_helper');
+require('app/helpers/yql_helper');
 
 require('app/models/widgets/widget');
 require('app/models/widgets/flippable_widget');
