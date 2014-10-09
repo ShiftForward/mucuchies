@@ -40,6 +40,7 @@ Dashboard.RssWidget = Dashboard.FlippableWidget.extend({
     if (toShow >= allData.length) toShow = 0;
     this.set('nextItemIdx', (toShow + 1) % allData.length);
 
+    allData[toShow].howLongAgo = moment(allData[toShow].publishedDate).fromNow();
     return allData[toShow];
   },
 
