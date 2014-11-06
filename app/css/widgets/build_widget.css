@@ -55,11 +55,11 @@
 }
 
 .widget-build li.failed {
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: #dc5945;
 }
 
 .widget-build li.pending {
-  background-color: rgba(255,255,255, 0.15);
+  background-color: rgba(255,255,255, 0.35);
 }
 
 .widget-build li.passed {
