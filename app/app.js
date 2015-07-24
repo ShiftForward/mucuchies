@@ -33,6 +33,7 @@ require('app/models/sources/source');
 require('app/models/sources/periodic_source');
 require('app/models/sources/last_fm_source');
 require('app/models/sources/atmosphere_source');
+require('app/models/sources/websocket_source');
 require('app/models/sources/trello_source');
 require('app/models/sources/weather_source');
 require('app/models/sources/bitstamp_source');
