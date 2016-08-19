@@ -1,0 +1,28 @@
+{{#if title}}
+<h1 class="title">{{title}}</h1>
+{{/if}}
+
+<i class="icon-code-fork icon-background"></i>
+
+{{#if content}}
+<ul class="items list-nostyle">
+  {{#each content}}
+  <li>
+    <div class="pr-title">{{title}}</div>
+
+    <img width="30" height=30" class="repo-avatar" {{bindAttr src="repository_avatar"}}/>
+    {{#each participants}}
+      <div class="pr-assigned-to">
+        <img width="30" height=30" {{bindAttr src="user.links.avatar.href"}}/>
+        {{#if approved}}
+          <div class="pr-approved"></div>
+        {{/if}}
+      </div>
+    {{/each}}
+
+    <div style="clear: both;"></div>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}
+{{view Dashboard.LastUpdatedView}}
