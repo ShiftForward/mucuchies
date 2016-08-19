@@ -113,18 +113,25 @@ DashboardConfig = {
       },
       {
         pos: [1, 3],
-        widget: 'Dashboard.ClockWidget',
-        source: 'Dashboard.TimeSource'
+        size: [1, 2],
+        widget: 'Dashboard.PullRequestWidget',
+        source: 'Dashboard.GitLabMergeRequestSource',
+        args: {
+          title: "Merge Requests",
+          maxRequests: 6
+        },
+        sourceArgs: {
+          // You can create your GitLab personal token in the GitLab profile settings. Please avoid using
+          // the keys in the demo!
+          privateToken: "C5y63Q5onbYh5-5fyZp9",
+          repoOwner: "gitlab-org",
+          repoName: "gitlab-ce"
+        }
       },
       {
         pos: [1, 4],
-        size: [1, 2],
-        widget: 'Dashboard.BuildWidget',
-        source: 'Dashboard.JenkinsSource',
-        sourceArgs: {
-          baseUrl: "https://jenkins.qa.ubuntu.com",
-          view: "PS"
-        }
+        widget: 'Dashboard.ClockWidget',
+        source: 'Dashboard.TimeSource'
       },
       {
         pos: [1, 5],
@@ -146,7 +153,7 @@ DashboardConfig = {
         args: { title: "Sprint" }
       },
       {
-        pos: [2, 3],
+        pos: [2, 4],
         widget: 'Dashboard.SongWidget',
         source: 'Dashboard.LastFmSource',
         sourceArgs: {

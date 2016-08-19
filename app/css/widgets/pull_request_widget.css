@@ -1,0 +1,55 @@
+.widget-pull-request {
+  background-color: #0680a5;
+  color: rgba(255, 255, 255, 1.0);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 12px;
+}
+
+.widget-pull-request .title {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.widget-pull-request .items > li {
+  margin-bottom: 10px;
+}
+
+.widget-pull-request .pr-title {
+  color: rgba(255, 255, 255, 1.0);
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.widget-pull-request .pr-author {
+  font-size: 15px;
+}
+
+.widget-pull-request .pr-assigned-to {
+  float: left;
+  position: relative;
+  margin-right: 2px;
+}
+
+.widget-pull-request .pr-approved {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(114, 142, 57, 0.8);
+  text-align: center;
+}
+
+.widget-pull-request .pr-approved:after {
+  color: white;
+  font-family: FontAwesome;
+  font-size: 18px;
+  content: '\F00C';
+  display: block;
+  padding-top: 7px;
+}
+
+.widget-pull-request .repo-avatar {
+  float: right;
+}
